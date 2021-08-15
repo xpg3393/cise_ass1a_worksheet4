@@ -2,7 +2,8 @@ import React from "react";
 import{
   Route,
   NavLink,
-  BrowserRouter as Router
+  BrowserRouter as Router,
+  Redirect
 } from "react-router-dom";
 
 import Home from "./pages/Home";
@@ -24,6 +25,8 @@ const App = () =>  {
             <Route exact path="/" component={Home}/>
             <Route  path="/SEPractice" component={SEPractice}/>
             <Route  path="/SubmitArticle" component={SubmitArticle}/>
+            <Route exact path="/404" component={NotFoundPage}/>
+            <Redirect to="/404" />
           </div>
         </div>
         </Router>
